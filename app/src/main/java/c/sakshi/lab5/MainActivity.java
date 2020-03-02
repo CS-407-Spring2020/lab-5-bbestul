@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         if (!sharedPreferences.getString(usernameKey, "").equals("")){
             // Someone logged in
             Intent intent = new Intent(this, NoteActivity.class);
-            String username = sharedPreferences.getString("username", "");
-            intent.putExtra("USERNAME", username);
-
             startActivity(intent);
         } else {
             setContentView(R.layout.activity_main);
